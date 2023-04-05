@@ -1,19 +1,21 @@
-import { Button, Modal, Stack, Title } from "@mantine/core";
+import { Button, Modal, Stack, Title } from '@mantine/core';
 
-import { QuizInfo } from "../App";
-import StatusModal from "./StatusModal";
-import React from "react";
+import StatusModal from './StatusModal';
+import { useState } from 'react';
+import { QuizInfo } from '../interfaces/quizz';
 
-interface QuizInterface {
+interface QuizzProps {
   quizInfo: QuizInfo;
   handleNext: () => void;
+  handleClick: (index: number) => void;
 }
 
-function Quiz({ quizInfo, handleNext }: QuizInterface) {
-  const [opened, setOpened] = React.useState(false);
-  const [isCorrect, setCorrect] = React.useState(false);
+function Quiz({ quizInfo, handleNext, handleClick }: QuizzProps) {
+  const [opened, setOpened] = useState(false);
+  const [isCorrect, setCorrect] = useState(false);
 
-  const handleClick = (index: number) => {
+  const handleChoice = (index: number) => {
+    handleClick(index);
     if (index == quizInfo.answerIndex) setCorrect(true);
     setOpened(true);
   };
@@ -29,7 +31,7 @@ function Quiz({ quizInfo, handleNext }: QuizInterface) {
               radius="xl"
               size="md"
               key={option.text}
-              onClick={() => handleClick(index)}
+              onClick={() => handleChoice(index)}
             >
               {option.text}
             </Button>

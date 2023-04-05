@@ -1,4 +1,4 @@
-import { Button, Modal, Portal, Space, Text, Title } from "@mantine/core";
+import { Button, Modal, Portal, Space, Text, Title } from '@mantine/core';
 
 interface StatusModalProps {
   opened: boolean;
@@ -13,9 +13,9 @@ function StatusModal({
   isCorrect,
   correctChoiceText,
   explanationText,
-  handleNext,
+  handleNext
 }: StatusModalProps) {
-  const title = isCorrect ? "Correct!" : "Incorrect 🥲";
+  const title = isCorrect ? 'Correct!' : 'Incorrect 🥲';
   return (
     <Portal>
       <Modal
@@ -24,7 +24,7 @@ function StatusModal({
         withCloseButton={false}
         centered
       >
-        <Title color={isCorrect ? "green" : "red"} align="center">
+        <Title color={isCorrect ? 'green' : 'red'} align="center">
           {title}
         </Title>
         <Space h="lg" />
