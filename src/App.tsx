@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-import Quiz from "./components/Quiz";
 import {
   BackgroundImage,
   Center,
   Container,
   LoadingOverlay,
+  Stack,
+  Text,
+  Title,
 } from "@mantine/core";
+
+import Quiz from "./components/Quiz";
 
 interface QuizChoice {
   text: string;
@@ -53,11 +57,18 @@ function App() {
       >
         <Center sx={{ height: "100%" }}>
           <Container size="32rem">
-            <Quiz
-              quizInfo={quizData[currentIndex]}
-              handleNext={handleNext}
-              key={currentIndex}
-            />
+            {currentIndex === quizData.length ? (
+              <Stack spacing="sm">
+                <Title align="center">🎉 Congratulations!</Title>
+                <Text size="lg">You have completed all the quizzes.</Text>
+              </Stack>
+            ) : (
+              <Quiz
+                quizInfo={quizData[currentIndex]}
+                handleNext={handleNext}
+                key={currentIndex}
+              />
+            )}
           </Container>
         </Center>
       </BackgroundImage>
