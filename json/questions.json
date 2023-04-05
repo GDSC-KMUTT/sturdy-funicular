@@ -1,0 +1,43 @@
+[
+  {
+    "question": "What is the fastest type of memory in the memory hierarchy?",
+    "options": [
+      { "text": "SRAM" },
+      { "text": "DRAM" },
+      { "text": "ROM" },
+      { "text": "HDD" }
+    ],
+    "answerIndex": 0,
+    "explanationText": "SRAM is faster than DRAM because it uses flip-flops instead of capacitors to store data."
+  },
+  {
+    "question": "What is the difference between volatile and non-volatile memory?",
+    "options": [
+      {
+        "text": "Volatile memory retains data when power is removed, non-volatile memory doesn't."
+      },
+      {
+        "text": "Non-volatile memory retains data when power is removed, volatile memory doesn't."
+      },
+      {
+        "text": "Both volatile and non-volatile memory retain data when power is removed."
+      },
+      {
+        "text": "Neither volatile nor non-volatile memory retain data when power is removed."
+      }
+    ],
+    "answerIndex": 1,
+    "explanationText": "SRAM is faster than DRAM because it uses flip-flops instead of capacitors to store data."
+  },
+  {
+    "question": "Which of the following is an example of secondary storage?",
+    "options": [
+      { "text": "Cache memory" },
+      { "text": "Register memory" },
+      { "text": "RAM" },
+      { "text": "Hard disk drive" }
+    ],
+    "answerIndex": 3,
+    "explanationText": "Secondary storage devices are used for long-term storage, and examples include hard disk drives and solid-state drives."
+  }
+]
