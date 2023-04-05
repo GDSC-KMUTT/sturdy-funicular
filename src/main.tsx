@@ -20,6 +20,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                 borderRadius: "10px;",
                 color: "black",
                 border: "1px solid rgba( 255, 255, 255, 0.18 );",
+                wordBreak: "break-word",
+                height: "100%",
+                minHeight: "2.625rem",
+                padding: ".75rem 1.375rem",
+              },
+              label: {
+                whiteSpace: "normal",
               },
             },
           },
