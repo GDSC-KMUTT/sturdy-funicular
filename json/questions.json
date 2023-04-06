@@ -39,5 +39,98 @@
     ],
     "answerIndex": 3,
     "explanationText": "Secondary storage devices are used for long-term storage, and examples include hard disk drives and solid-state drives."
+  },
+  {
+    "question": "What is the purpose of memory hierarchy in a computer system?",
+    "options": [
+      {
+        "text": "To provide a faster and more efficient way of accessing data"
+      },
+      { "text": "To provide more storage space for data" },
+      { "text": "To prevent data from being lost due to power failures" },
+      { "text": "To provide redundancy in case of hardware failures" }
+    ],
+    "answerIndex": 0,
+    "explanationText": "Description: Memory hierarchy is designed to provide a faster and more efficient way of accessing data by storing frequently used data in the cache, which is faster than main memory."
+  },
+  {
+    "question": "What is cache memory?",
+    "options": [
+      {
+        "text": "A type of memory used for long-term storage"
+      },
+      { "text": "A type of memory used for short-term storage" },
+      { "text": "A type of memory used for virtual memory" },
+      { "text": "A type of memory used for backup storage" }
+    ],
+    "answerIndex": 1,
+    "explanationText": "Cache memory is a type of memory used for short-term storage of frequently used data. It is faster than main memory and is used to improve computer performance."
+  },
+  {
+    "question": "What is a cache hit?",
+    "options": [
+      { "text": "When data is found in the cache" },
+      { "text": "When data is not found in the cache" },
+      { "text": "When the cache is full" },
+      { "text": "When the cache is empty" }
+    ],
+    "answerIndex": 0,
+    "explanationText": "A cache hit occurs when the requested data is found in the cache, meaning the data can be accessed quickly without having to retrieve it from main memory."
+  },
+  {
+    "question": "What is a cache miss?",
+    "options": [
+      { "text": "When data is found in the cache" },
+      { "text": "When data is not found in the cache" },
+      { "text": "When the cache is full" },
+      { "text": "When the cache is empty" }
+    ],
+    "answerIndex": 1,
+    "explanationText": "A cache miss occurs when the requested data is not found in the cache, meaning the data must be retrieved from main memory."
+  },
+  {
+    "question": "What is the purpose of cache memory?",
+    "options": [
+      {
+        "text": "To provide a backup copy of data in case of hardware failures"
+      },
+      { "text": "To store data that is not currently being used" },
+      {
+        "text": "To provide a fast and efficient way of accessing frequently used data"
+      },
+      { "text": "To manage the flow of data between the processor and memory" }
+    ],
+    "answerIndex": 2,
+    "explanationText": "The purpose of cache memory is to provide a fast and efficient way of accessing frequently used data. By storing this data in cache memory, it can be accessed quickly without having to retrieve it from main memory."
+  },
+  {
+    "question": "What is I/O?",
+    "options": [
+      {
+        "text": "Input/output"
+      },
+      { "text": "Integrated operating" },
+      {
+        "text": "Internal operation"
+      },
+      { "text": "Interactive operation" }
+    ],
+    "answerIndex": 0,
+    "explanationText": "I/O stands for input/output and refers to the process of transferring data between a computer and its external environment."
+  },
+  {
+    "question": "What is DMA?",
+    "options": [
+      {
+        "text": "Direct memory access"
+      },
+      { "text": "Direct module access" },
+      {
+        "text": "Direct memory association"
+      },
+      { "text": "Direct mother access" }
+    ],
+    "answerIndex": 0,
+    "explanationText": "DMA stands for direct memory access and is a feature of computer systems that allows certain hardware subsystems to access main memory independently of the CPU. This can speed up data transfers and reduce the workload on the CPU."
   }
 ]
