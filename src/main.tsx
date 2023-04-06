@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import { Box, MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from '@mantine/core';
 
-import App from "./App";
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <MantineProvider
       withGlobalStyles
@@ -28,11 +28,11 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                 lineHeight: "normal",
               },
               label: {
-                whiteSpace: "normal",
-              },
-            },
-          },
-        },
+                whiteSpace: 'normal'
+              }
+            }
+          }
+        }
       }}
     >
       <App />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from 'react';
 
 import {
   BackgroundImage,
@@ -8,32 +8,24 @@ import {
   Stack,
   Text,
   Title,
-} from "@mantine/core";
+  Button
+} from '@mantine/core';
 
-import Quiz from "./components/Quiz";
-
-interface QuizChoice {
-  text: string;
-}
-
-interface QuizInfo {
-  question: string;
-  options: QuizChoice[];
-  answerIndex: number;
-  explanationText: string;
-}
+import Quiz from './components/Quiz';
+import { QuizInfo } from './interfaces/quizz';
+import { shuffleArray } from './utils/shuffle';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [quizData, setQuizData] = useState<QuizInfo[]>([]);
+  const [score, setScore] = useState<number>(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("./json/questions.json");
+        const response = await fetch('./json/questions.json');
         const data = await response.json();
-        setQuizData(data);
-        console.log(data);
+        setQuizData(shuffleArray<QuizInfo>(data));
       } catch (error) {
         console.error(error);
       }
@@ -42,7 +34,18 @@ function App() {
   }, []);
 
   const handleNext = () => {
-    setCurrentIndex((curr) => curr + 1);
+    setCurrentIndex(curr => curr + 1);
+  };
+
+  const handleClick = (index: number) => {
+    if (index === quizData[currentIndex].answerIndex) {
+      setScore(prev => prev + 1);
+    }
+  };
+
+  const handleTryAgain = () => {
+    setCurrentIndex(0);
+    setScore(0);
   };
 
   if (!quizData || quizData.length === 0)
@@ -53,19 +56,26 @@ function App() {
       <BackgroundImage
         src="./img/background.jpg"
         bgp="top"
-        sx={{ height: "100%" }}
+        sx={{ height: '100%' }}
       >
-        <Center sx={{ height: "100%" }}>
+        <Center sx={{ height: '100%' }}>
           <Container size="32rem">
             {currentIndex === quizData.length ? (
               <Stack spacing="sm">
                 <Title align="center">🎉 Congratulations!</Title>
                 <Text size="lg">You have completed all the quizzes.</Text>
+                <Text size="md">
+                  Your Score: {score}/{quizData.length}
+                </Text>
+                <Button variant="outline" onClick={handleTryAgain}>
+                  Try Again
+                </Button>
               </Stack>
             ) : (
               <Quiz
                 quizInfo={quizData[currentIndex]}
                 handleNext={handleNext}
+                handleClick={handleClick}
                 key={currentIndex}
               />
             )}
