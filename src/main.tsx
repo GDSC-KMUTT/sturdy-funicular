@@ -15,15 +15,17 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           Button: {
             styles: {
               root: {
-                background: "rgba( 255, 255, 255, 0.15 );",
-                backdropFilter: "blur( 4px );",
-                borderRadius: "10px;",
+                background: "rgba( 255, 255, 255, 0.15 )",
+                backdropFilter: "blur( 4px )",
+                borderRadius: "10px",
                 color: "black",
-                border: "1px solid rgba( 255, 255, 255, 0.18 );",
+                border: "1px solid rgba( 255, 255, 255, 0.18 )",
                 wordBreak: "break-word",
                 height: "100%",
                 minHeight: "2.625rem",
                 padding: ".75rem 1.375rem",
+                textAlign: "center",
+                lineHeight: "normal",
               },
               label: {
                 whiteSpace: "normal",
